@@ -1,0 +1,24 @@
+header {
+  background-color: darkcyan;
+  background-image: url("/images/subtle-grunge.png");
+  height: 550px;
+  width: 100%;
+}
+
+.profilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+}
+
+.profileName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.lightFont {
+  font-weight: 300;
+}
