@@ -1,0 +1,33 @@
+nav {
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  width: 100%;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+nav > span {
+  font-family: 'Bungee', sans-serif;
+}
+
+.writeNew {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: right;
+}
+
+.logo {
+  text-align: left;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.5em;
+}
+
+.fa-angles-down {
+  color: red;
+  text-align: right;
+}
