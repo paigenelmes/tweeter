@@ -38,3 +38,7 @@ button {
   padding: 8px 12px;
   font-family: 'Bungee', sans-serif;
 }
+
+.red {
+  color: red;
+}
