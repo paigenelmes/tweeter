@@ -1,6 +1,4 @@
-//It would be nice if we could import this data instead of copy/pasting it. Let's ask.
-//I tried require, fetch (local) & fetch (github link) but I couldn't get anything to work.
-
+//User & Tweet Data
 const data = [
   {
     "user": {
@@ -20,24 +18,74 @@ const data = [
       "handle": "@rd"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Je pense, donc je suis"
     },
     "created_at": 1668480817450
   }
 ];
 
+//Function to find the amount of time passed since the tweet was posted
+const timeSince = function(date) {
+  if (typeof date !== 'object') {
+    date = new Date(date);
+  }
+
+  let seconds = Math.floor((new Date() - date) / 1000);
+  let intervalType;
+
+  let interval = Math.floor(seconds / 31536000);
+  if (interval >= 1) {
+    intervalType = 'year';
+  } else {
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) {
+      intervalType = 'month';
+    } else {
+      interval = Math.floor(seconds / 86400);
+      if (interval >= 1) {
+        intervalType = 'day';
+      } else {
+        interval = Math.floor(seconds / 3600);
+        if (interval >= 1) {
+          intervalType = "hour";
+        } else {
+          interval = Math.floor(seconds / 60);
+          if (interval >= 1) {
+            intervalType = "minute";
+          } else {
+            interval = seconds;
+            intervalType = "second";
+          }
+        }
+      }
+    }
+  }
+
+  if (interval > 1 || interval === 0) {
+    intervalType += 's';
+  }
+
+  return (`${interval} ${intervalType} ago`);
+};
+
 $(document).ready(function() {
   //Making sure jQuery is ready
   console.log("Document Ready!");
-  //Create tweet function
+  //Create tweets function
   const createTweets = function(data) {
     const $tweet = $(`<article class ="tweet">
     <header>
-    <p>"User name, profile pic & handle goes here"</p>
+      <div>
+        <img src="${data.user.avatars}" alt="profile-pic" class="profile">
+          <p>${data.user.name}</p>
+        <span id="handle">
+          <p>${data.user.handle}</p>
+        </span>
+      </div>
+      <h3>${data.content.text}</h3>
     </header>
-    <p>"Tweet goes here"</p>
     <footer>
-    <p>"Date goes here"</p>
+    <p id="date">${timeSince(data.created_at)}</p>
     <p id="icons"><i class="fa-solid fa-flag"></i> <i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></p>
     </footer>
     </article>`);
@@ -53,6 +101,3 @@ $(document).ready(function() {
   displayTweets(data);
 
 });
-
-
-
