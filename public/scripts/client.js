@@ -71,8 +71,8 @@ const timeSince = function(date) {
 $(document).ready(function() {
   //Making sure jQuery is ready
   console.log("Document Ready!");
-  //Create tweets function
-  const createTweets = function(data) {
+  //Create Tweet Element function
+  const createTweetElement = function(data) {
     const $tweet = $(`<article class ="tweet">
     <header>
       <div>
@@ -91,13 +91,16 @@ $(document).ready(function() {
     </article>`);
     return $tweet;
   };
-  //Display tweets function
-  const displayTweets = function(tweets) {
+  //Render Tweets function
+  const renderTweets = function(tweets) {
+    //Loop through tweets
     for (const tweet of tweets) {
-      const $tweet = createTweets(tweet);
+      //Call create tweet element function for each tweet
+      const $tweet = createTweetElement(tweet);
+      //Take return value & append it to tweet container
       $("#tweet-container").append($tweet);
     }
   };
-  displayTweets(data);
+  renderTweets(data);
 
 });
