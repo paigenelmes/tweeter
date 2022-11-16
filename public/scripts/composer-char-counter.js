@@ -5,7 +5,7 @@ $(document).ready(function() {
     const count = (140 - charCount);
     const counter = $(".counter");
     counter.text(count);
-    //If the counter is less than zero, turn text red
+    //If the count is less than zero, turn text red
     if (count < 0) {
       counter.addClass("red");
     } else {
