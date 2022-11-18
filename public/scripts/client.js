@@ -25,21 +25,27 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  //Variables for new tweet form & tweet text
+  //Variable for new tweet form
   const $form = $(".new-tweet form");
-  const $tweetText = $("#tweet-text");
-  console.log("Tweet Text", $tweetText);
   //Listen for form submissions
   $form.on("submit", function(event) {
     //Prevent the form from loading a new page
     event.preventDefault();
-    let serializeData = $(this).serialize();
-    //Serialize the form data & send it to the server as a query string
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: serializeData,
-    });
+    //If tweet is over 140 characters, display an error alert
+    if ($("#tweet-text").val().length > 140) {
+      alert("Sorry, tweets over 140 characters are not allowed. Please delete some text and try again.");
+      //If tweet is blank, display an error altert
+    } else if ($("#tweet-text").val() === "") {
+      alert("Sorry, a tweet cannot be blank. Please add some text and try again.");
+    } else {
+      //If no errors, serialize the form data & send it to the server as a query string
+      let serializeData = $(this).serialize();
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: serializeData
+      });
+    }
   });
 
   //Render Tweets function
@@ -61,5 +67,6 @@ $(document).ready(function() {
     })
       .then((response) => renderTweets(response));
   };
+  
   loadTweets();
 });
