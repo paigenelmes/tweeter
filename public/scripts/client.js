@@ -6,6 +6,16 @@ $(document).ready(function() {
   const createTweetElement = function(data) {
     //Get date using Time Ago
     let date = timeago.format(data.created_at);
+    //Variable for text from user
+    let textFromUser = data.content.text;
+    //Escape function
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+    //Variable for safe HTML
+    const safeHTML = `<p>${escape(textFromUser)}</p>`;
     const $tweet = $(`<article class ="tweet">
     <header>
       <div>
@@ -15,7 +25,7 @@ $(document).ready(function() {
           <p>${data.user.handle}</p>
         </span>
       </div>
-      <h3>${data.content.text}</h3>
+      <h3>${safeHTML}</h3>
     </header>
     <footer>
     <p id="date">${date}</p>
