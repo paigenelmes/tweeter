@@ -91,6 +91,27 @@ $(document).ready(function() {
     </article>`);
     return $tweet;
   };
+
+  //New Tweet form
+  const form = $(".new-tweet form");
+  //Listen for form submissions
+  form.on("submit", (event) => {
+    //Prevent the form from loading a new page
+    event.preventDefault();
+    //Serialize the form data & send it to the server as a query string
+    $.ajax({
+      url: "/tweets",
+      data: $(this).serialize(),
+      success: (response) => {
+        console.log(response);
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    });
+  });
+
+
   //Render Tweets function
   const renderTweets = function(tweets) {
     //Loop through tweets
