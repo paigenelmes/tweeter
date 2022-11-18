@@ -39,11 +39,15 @@ $(document).ready(function() {
       alert("Sorry, a tweet cannot be blank. Please add some text and try again.");
     } else {
       //If no errors, serialize the form data & send it to the server as a query string
+      //Reload page on success
       let serializeData = $(this).serialize();
       $.ajax({
         url: "/tweets",
         method: "POST",
-        data: serializeData
+        data: serializeData,
+        success: function() {
+          location.reload();
+        }
       });
     }
   });
