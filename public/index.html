@@ -59,6 +59,14 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <!--Error messages-->
+        <section class="errorLong">
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Sorry, tweets over 140 characters are not allowed. Please delete some text and try again.</p>
+        </section>
+        <section class="errorShort">
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Sorry, a tweet cannot be blank. Please add some text and try again.</p>
+        </section>
+        <!--Submit Tweet-->
         <form action="/tweets" method="POST" id="submit-tweet"> 
           <label for="tweet-text" id="tweet-label">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -68,6 +76,7 @@
           </div>
         </form>
       </section>
+      <!--Tweet Container-->
       <section class="tweet" id="tweet-container">
       </section>
     </main>

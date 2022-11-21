@@ -41,12 +41,14 @@ $(document).ready(function() {
   $form.on("submit", function(event) {
     //Prevent the form from loading a new page
     event.preventDefault();
-    //If tweet is over 140 characters, display an error alert
+    //If tweet is over 140 characters, display an error with jQuery
     if ($("#tweet-text").val().length > 140) {
-      alert("Sorry, tweets over 140 characters are not allowed. Please delete some text and try again.");
-      //If tweet is blank, display an error altert
+      $(".errorLong").slideDown("slow");
+      $(".errorShort").hide();
+      //If tweet is blank, display an error with jQuery
     } else if ($("#tweet-text").val() === "") {
-      alert("Sorry, a tweet cannot be blank. Please add some text and try again.");
+      $(".errorShort").slideDown("slow");
+      $(".errorLong").hide();
     } else {
       //If no errors, serialize the form data & send it to the server as a query string
       //Reload page on success

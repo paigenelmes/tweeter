@@ -42,3 +42,27 @@ button {
 .red {
   color: red;
 }
+
+.errorLong {
+  display: none;
+  color: red;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.errorShort {
+  display: none;
+  color: red;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
