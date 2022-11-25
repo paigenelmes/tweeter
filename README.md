@@ -7,7 +7,7 @@ This project was a great way to practice my HTML, CSS, JS, jQuery and AJAX front
 ## Screenshots
 
 ![Tweeter features a responsive layout. Here's how it looks on a larger screen, such as a laptop or desktop.](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-desktop.png)
-*Express your thoughts as you please! You can even use emojis.*
+*Tweeter features a responsive layout. Here's how it looks on a larger screen, such as a laptop or desktop.*
 
 ![Is mobile browsing more your thing? No worries! Tweeter looks great on phones and tablets as well.](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-feed-mobile.png)
 *Is mobile browsing more your thing? No worries! Tweeter looks great on phones and tablets as well.*
@@ -16,7 +16,7 @@ This project was a great way to practice my HTML, CSS, JS, jQuery and AJAX front
 *Express your thoughts as you please! You can even use emojis. Remember to be polite!*
 
 ![Keep in mind that your tweets need to be under 140 characters. There's no room for essays!](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-character-limit.png)
-*Keep in mind that your tweets need to be under 140 characters. The*re's no room for essays!*
+*Keep in mind that your tweets need to be under 140 characters. There's no room for essays!*
 
 ## Getting Started
 
