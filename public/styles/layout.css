@@ -41,3 +41,39 @@ body {
   width: 90%;
   align-self: center;
 }
+
+
+/* MOBILE & TABLET: UNDER 1024PX */
+@media only screen and (max-width: 1024px) {
+  body > nav {
+    background-color: darkcyan;
+    background-image: url("/images/subtle-grunge.png");
+  }
+}
+
+/* LAPTOP & DESKTOP: OVER 1024PX */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  body > header {
+    max-width: 40%;
+    align-self: flex-start;
+    margin-top: 160px;
+    margin-left: 30px;
+  }
+
+  body > main {
+    max-width: 60%;
+    padding-top: 130px;
+  }
+}
