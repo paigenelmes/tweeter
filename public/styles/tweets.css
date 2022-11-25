@@ -1,3 +1,4 @@
+/* Styling the Tweets area */
 article.tweet header {
   background-color: #F4F1EB;
   background-image: none;
@@ -44,6 +45,7 @@ article.tweet header div p {
   object-fit: contain;
 }
 
+/* Styling the Icons */
 #icons {
   float: right;
   color: #4155A1;
@@ -59,6 +61,7 @@ article.tweet header div p {
   padding-right: 5px;
 }
 
+/* Styling the Date */
 #date {
   float: left;
 }

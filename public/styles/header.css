@@ -1,15 +1,17 @@
+/* Header Background Color & Background Texture Image */
 header {
   background-color: darkcyan;
   background-image: url("/images/subtle-grunge.png");
-  height: 550px;
+  height: 520px;
   width: 100%;
 }
 
+/* Styling profile photo & profile name */
 .profilePic {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .profileName {
