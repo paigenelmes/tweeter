@@ -6,16 +6,16 @@ This project was a great way to practice my HTML, CSS, JS, jQuery and AJAX front
 
 ## Screenshots
 
-![Tweeter features a responsive layout. Here's how it looks on a larger screen, such as a laptop or desktop.](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-desktop.png)
+![Tweeter features a responsive layout. Here's how it looks on a larger screen, such as a laptop or desktop.](https://github.com/paigenelmes/tweeter/blob/master/public/images/screenshots/tweeter-desktop.png)
 *Tweeter features a responsive layout. Here's how it looks on a larger screen, such as a laptop or desktop.*
 
-![Is mobile browsing more your thing? No worries! Tweeter looks great on phones and tablets as well.](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-feed-mobile.png)
+![Is mobile browsing more your thing? No worries! Tweeter looks great on phones and tablets as well.](https://github.com/paigenelmes/tweeter/blob/master/public/images/screenshots/tweeter-feed-mobile.png)
 *Is mobile browsing more your thing? No worries! Tweeter looks great on phones and tablets as well.*
 
-![Express your thoughts as you please! You can even use emojis. Remember to be polite!](https://github.com/paigenelmes/tweeter/blob/master/public/images/twitter-new-tweet-mobile.png)
+![Express your thoughts as you please! You can even use emojis. Remember to be polite!](https://github.com/paigenelmes/tweeter/blob/master/public/images/screenshots/twitter-new-tweet-mobile.png)
 *Express your thoughts as you please! You can even use emojis. Remember to be polite!*
 
-![Keep in mind that your tweets need to be under 140 characters. There's no room for essays!](https://github.com/paigenelmes/tweeter/blob/master/public/images/tweeter-character-limit.png)
+![Keep in mind that your tweets need to be under 140 characters. There's no room for essays!](https://github.com/paigenelmes/tweeter/blob/master/public/images/screenshots/tweeter-character-limit.png)
 *Keep in mind that your tweets need to be under 140 characters. There's no room for essays!*
 
 ## Getting Started
