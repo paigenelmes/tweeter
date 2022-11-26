@@ -2,10 +2,13 @@
 article.tweet header {
   background-color: #F4F1EB;
   background-image: none;
-  height: 200px;
 }
 
 article.tweet {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 200px;
   border-style: solid;
   border-width: 6px;
   border-color: #545149;
@@ -17,9 +20,11 @@ article.tweet {
   margin-bottom: 1em;
 }
 
+article.tweet:hover {
+  box-shadow: 0 0 12px grey;
+}
+
 article.tweet footer {
-  border-style: hidden;
-  border-bottom: 6px solid #545149;
   margin-bottom: 1em;
   margin-top: 1em;
   padding-top: 0.5em;
@@ -49,11 +54,13 @@ article.tweet header div p {
 #icons {
   float: right;
   color: #4155A1;
+  overflow: scroll;
 }
 
 .fa-solid:hover {
   text-shadow: 0 0 11px rgba(33,33,33,.2); 
   color: goldenrod;
+  overflow: scroll;
 }
 
 .fa-solid {
@@ -64,4 +71,13 @@ article.tweet header div p {
 /* Styling the Date */
 #date {
   float: left;
+}
+
+/* Styling the Tweet text to prevent overflow */
+.tweet-text {
+  font-weight: 600;
+  word-break: break-word;
+  overflow: scroll;
+  border-style: hidden;
+  border-bottom: 6px solid #545149;
 }

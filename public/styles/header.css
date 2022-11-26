@@ -1,5 +1,6 @@
 /* Header Background Color & Background Texture Image */
-header {
+/* (Using a class here to avoid conflict with the tweet article header)*/
+.main-header {
   background-color: darkcyan;
   background-image: url("/images/subtle-grunge.png");
   height: 520px;

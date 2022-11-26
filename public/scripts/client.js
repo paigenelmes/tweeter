@@ -25,7 +25,7 @@ $(document).ready(function() {
           <p>${data.user.handle}</p>
         </span>
       </div>
-      <h3>${safeHTML}</h3>
+      <div class="tweet-text">${safeHTML}</div>
     </header>
     <footer>
     <p id="date">${date}</p>
