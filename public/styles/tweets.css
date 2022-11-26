@@ -20,6 +20,7 @@ article.tweet {
   margin-bottom: 1em;
 }
 
+/* Add box shadow on hover */
 article.tweet:hover {
   box-shadow: 0 0 12px grey;
 }
@@ -73,7 +74,7 @@ article.tweet header div p {
   float: left;
 }
 
-/* Styling the Tweet text to prevent overflow */
+/* Styling the Tweet text & preventing text overflow */
 .tweet-text {
   font-weight: 600;
   word-break: break-word;
